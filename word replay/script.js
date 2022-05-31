@@ -1,8 +1,10 @@
 const number = Number(prompt("몇 명이 참가하나요?"));
+
 const $button = document.querySelector("button");
 const $input = document.querySelector("input");
 const $word = document.querySelector("#word");
 const $order = document.querySelector("#order");
+
 let word; // 제시어
 let newWord; // 현재 단어
 const onClickButton = () => {
@@ -12,6 +14,7 @@ const onClickButton = () => {
     $word.textContent = word; // 화면에 제시어 표시
     const order = Number($order.textContent);
     if (order + 1 > number) {
+      // 참가자 수
       $order.textContent = 1;
     } else {
       $order.textContent = order + 1;
