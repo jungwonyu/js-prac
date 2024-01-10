@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>끝말잇기</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container px-5 my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card border-0 rounded-3 shadow-lg">
+          <div class="card-body p-4">
+
+            <div class="text-center">
+              <h2 class="mb-2">👾 재밌고~ 신나는~ 끝말잇기 게임! 🎮</h2>
+              <p class="mb-3 text-muted">끝말을 이어서 입력하세요 🎈 한글과 영어 다 가능해요 😇</p>
+            </div>
+
+            <!-- 참가자 -->
+            <div class="form-floating text-center">
+              <div>현재 <span id="order" class="text-red">1</span>번째 참가자 차례입니다 :)</div>
+            </div>
+
+            <!-- 제시어 -->
+            <div class="form-floating text-center">
+              <div>현재 제시어: <span id="word" class="text-red"></span></div>
+            </div>
+
+            <!-- 단어 입력 -->
+            <div class="form-floating mb-3">
+              <input class="form-control" type="text" />
+            </div>
+
+            <!-- 입력 버튼 -->
+            <div class="d-grid mb-3">
+              <button type="button" class="btn btn-primary btn-lg">입력</button>
+            </div>
+
+            <div class="footer">
+              <p>@jayjyoo</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 자바스크립트 -->
+  <script src="script.js"></script>
+</body>
+
+</html>

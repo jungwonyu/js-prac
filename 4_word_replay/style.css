@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    background-image: url("bg.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-red {
+    color: red;
+    font-size: 20px;
+}
+
+.btn-primary {
+    background-color: #ffcbcb;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #cecbff;
+    }
+
+.btn-primary:active {
+    background-color: #bab7ea;
+    }
+
+.footer {
+    color: dimgray;
+    text-align: right;
+}

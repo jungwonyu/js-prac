@@ -1,0 +1,42 @@
+/* #left-arrow:disabled {
+    color: gray;
+  }
+  
+  #right-arrow:disabled {
+    color: gray;
+  }
+  
+  #left-arrow:not(:disabled):hover {
+    color: red;
+  }
+  
+  #right-arrow:not(:disabled):hover {
+    color: red;
+  }
+   */
+
+   .date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .arrow {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    border: none;
+    background-color: white;
+    color: black;
+  }
+  
+  .arrow.red {
+    color: red;
+  }
+  
+  .date-box {
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
