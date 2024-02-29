@@ -9,7 +9,7 @@
     return document.querySelectorAll(target);
   };
 
-  class Calculator {
+  class Calculator {0
     constructor(element) {
       this.element = element;
       this.currentValue = '';
