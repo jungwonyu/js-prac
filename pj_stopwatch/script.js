@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return document.querySelector(target);
   };
 
-  class Stopwatch {
+  class StopWatch {
     constructor(element) {
       this.timer = element;
       this.default = `00:00.00`;
@@ -38,16 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
       this.elapsedTime = Date.now() - this.startTime;
       const time = this.timeToString(this.elapsedTime);
       this.print(time);
+      this.callback && this.callback.startTimer && this.callback.startTimer(time);
     }
 
     start() {
       clearInterval(this.interval);
       this.startTime = Date.now() - this.elapsedTime;
       this.interval = setInterval(this.startTimer.bind(this), 10);
-    }d
+      this.callback && this.callback.start && this.callback.start(this);
+    }
 
     stop() {
       clearInterval(this.interval);
+      this.callback && this.callback.stop && this.callback.stop(this);
     }
 
     reset() {
@@ -56,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.interval = null;
       this.startTime = 0;
       this.elapsedTime = 0;
+      this.callback && this.callback.reset && this.callback.reset(this);
     }
   }
 
@@ -64,9 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetButton = get('.timer_button.reset');
   const timer = get('.timer');
   
-  const stopWatch = new Stopwatch(timer);
+  const stopWatch = new StopWatch(timer);
 
   startButton.addEventListener('click', () => stopWatch.start());
   stopButton.addEventListener('click', () => stopWatch.stop());
   resetButton.addEventListener('click', () => stopWatch.reset());
+
+  /* callback 함수 추가 */
+  stopWatch.callback = {
+    start: (stopWatch) => {
+      console.log('start', stopWatch);
+    },
+    stop: (stopWatch) => {
+      console.log('stop', stopWatch);
+    },
+    reset: (stopWatch) => {
+      console.log('reset', stopWatch);
+    },
+    startTimer: (stopWatch) => {
+      // console.log('startTimer', stopWatch);
+    }
+  }
 })
