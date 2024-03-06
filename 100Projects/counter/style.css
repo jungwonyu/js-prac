@@ -1,0 +1,29 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.counter {
+    width: 800px;
+    height: 300px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons button {
+    width: 150px;
+    height: 42px;
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 16px;
+
+    cursor: pointer;
+}
